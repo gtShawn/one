@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: hbuy-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10010/eureka
+#配置对外访问的网关
+zuul:
+  routes:
+    hbuy-admin: /admin/**
+    hbuy-web: /web/**
+
